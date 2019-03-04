@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2019, Don Leo Corp
+-->
+<manifest>
+  <remote fetch="." name="project"/>
+  <remote fetch="../container" name="container"/>
+  
+  <default remote="container" revision="master"/>
+  
+  <project name="project1.git" path="container/project1"/>
+  <project name="project2.git" path="container/project2" revision="feature1"/>
+  <project name="shared_library.git" path="container/project2/shared_library" upstream="feature1"/>
+  <project name="shared_library.git" path="container/project1/shared_library" upstream="feature1"/>
+</manifest>
